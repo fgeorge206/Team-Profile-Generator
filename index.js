@@ -107,7 +107,7 @@ function menuSelect() {
 			askPosition = answers.ask;
 			if (answers.ask == "Done Building Team") {
 				console.log("Building team complete.");
-				fs.watchFile("./dist/teamProfile.html", generateHTML(team), (err) =>
+				fs.writeFile("./dist/teamProfile.html", generateHTML(team), (err) =>
                     err ? console.log(err) : console.log("teamProfile.html generated.")
                     );
                 } else {
